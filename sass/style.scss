@@ -25,17 +25,29 @@ $color-footer: rgba(65, 65, 65, 0.8);
   left: 0;
   height: 100px;
   width: 100vw;
-  background-color: rgba(155, 155, 155, 1);
-  z-index: -1;
+  background-color: rgba(155, 155, 155, 0.3);
+  z-index: 0;
+  .list {
+    text-align: center;
+    a:first-child {
+      margin-right: 280px;
+    }
+    a {
+      line-height: 100px;
+      color: white;
+      margin-right: 2vw;
+      text-decoration: none;
+    }
+  }
 }
 .arrow {
   color: rgb(0, 0, 0);
-  z-index: 1;
+  z-index: 2;
   .fas {
     position: absolute;
     line-height: 50px;
     top: 2vh;
-    right: 5vw;
+    right: 3vw;
     font-size: 1.5rem;
     transition: 0.3s;
   }
@@ -43,7 +55,7 @@ $color-footer: rgba(65, 65, 65, 0.8);
     display: none;
     position: absolute;
     top: 3vh;
-    right: 4.5vw;
+    right: 2.5vw;
     font: bold;
     z-index: -2;
     transition: 0.9s;
@@ -67,7 +79,9 @@ $color-footer: rgba(65, 65, 65, 0.8);
   grid-template-columns:
     auto minmax(242px, 288px) minmax(242px, 288px) minmax(242px, 288px)
     auto;
-  grid-template-rows: 400px 400px 400px 150px;
+
+  grid-template-rows: 400px 400px 400px minmax(150px, auto);
+  grid-auto-flow: dense;
   text-align: center;
   gap: 5vw;
   a {
@@ -89,18 +103,21 @@ $color-footer: rgba(65, 65, 65, 0.8);
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
     overflow: hidden;
+    transition: 0.3s;
   }
   #item2 {
     grid-area: 1/3/2/4;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item3 {
     grid-area: 1/4/2/5;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item4 {
     grid-area: 2/2/3/3;
@@ -113,6 +130,7 @@ $color-footer: rgba(65, 65, 65, 0.8);
       z-index: -1;
       transition: 0.5s linear;
     }
+    transition: 0.3s;
   }
   #item4:hover {
     .imgTwo {
@@ -125,35 +143,142 @@ $color-footer: rgba(65, 65, 65, 0.8);
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item6 {
     grid-area: 2/4/3/5;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item7 {
     grid-area: 3/2/4/3;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item8 {
     grid-area: 3/3/4/4;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
   }
   #item9 {
     grid-area: 3/4/4/5;
     background-color: $color-main;
     border-radius: 30px;
     box-shadow: 0px 0px 20px 3px rgba(192, 192, 192, 0.411);
+    transition: 0.3s;
+  }
+  #item1:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item2:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item4:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item3:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item5:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item6:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item7:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item8:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+  #item9:hover {
+    box-shadow: 0px 0px 20px 3px rgba(121, 117, 117, 0.411);
+  }
+
+  /*footer*/
+  #footer {
+    grid-area: 4/1/5/-1;
+    background-color: black;
+  }
+  .TXT {
+    grid-area: 4/2/5/3;
+    z-index: 1;
+    margin-top: 20px;
+    color: white;
+    p {
+      margin-top: 5px;
+    }
   }
 }
-
-/*footer*/
-#footer {
-  grid-area: 4/1/5/-1;
-  background-color: black;
+@media (max-width: 1360px) {
+  .banner {
+    transform: scale(0.9);
+    margin-top: -10px;
+  }
+}
+@media (max-width: 1250px) {
+  * {
+    font-size: 17px;
+  }
+  .banner {
+    transform: scale(0.85);
+    margin-top: -25px;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100vw;
+    background-color: rgba(155, 155, 155, 0.3);
+    z-index: 0;
+    .list {
+      text-align: center;
+      a:first-child {
+        margin-right: 200px;
+      }
+      a {
+        line-height: 70px;
+        color: white;
+        margin-right: 2vw;
+        text-decoration: none;
+      }
+    }
+  }
+  .arrow {
+    color: rgb(0, 0, 0);
+    z-index: 2;
+    .fas {
+      position: absolute;
+      line-height: 50px;
+      top: 1vh;
+      right: 3vw;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+    #click {
+      display: none;
+      position: absolute;
+      top: 2vh;
+      right: 2.5vw;
+      font-size: 0.8rem;
+      z-index: -2;
+      transition: 0.9s;
+    }
+  }
+  .arrow:hover {
+    .fas {
+      top: 3.5vh;
+    }
+    #click {
+      z-index: 1;
+      display: block;
+    }
+  }
 }
