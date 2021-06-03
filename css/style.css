@@ -340,7 +340,6 @@ body {
     left: 0;
     height: 70px;
     width: 100vw;
-    background-color: rgba(155, 155, 155, 0.3);
     z-index: 0;
   }
   .menu .list {
@@ -365,8 +364,6 @@ body {
     top: 1vh;
     right: 3vw;
     font-size: 1.2rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
   }
   .arrow #click {
     display: none;
@@ -375,8 +372,6 @@ body {
     right: 2.5vw;
     font-size: 0.8rem;
     z-index: -2;
-    -webkit-transition: 0.9s;
-    transition: 0.9s;
   }
   .arrow:hover .fas {
     top: 3.5vh;
