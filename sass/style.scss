@@ -40,6 +40,7 @@ $color-footer: rgba(65, 65, 65, 0.8);
     }
   }
 }
+
 .arrow {
   color: rgb(0, 0, 0);
   z-index: 2;
@@ -51,24 +52,10 @@ $color-footer: rgba(65, 65, 65, 0.8);
     font-size: 1.5rem;
     transition: 0.3s;
   }
-  #click {
-    display: none;
-    position: absolute;
-    top: 3vh;
-    right: 2.5vw;
-    font: bold;
-    z-index: -2;
-    transition: 0.9s;
-  }
 }
-.arrow:hover {
-  .fas {
-    top: 4.5vh;
-  }
-  #click {
-    z-index: 1;
-    display: block;
-  }
+.fas .on {
+  transform: rotate(180deg);
+  background-color: red;
 }
 
 /* grid container*/
@@ -249,34 +236,6 @@ $color-footer: rgba(65, 65, 65, 0.8);
         margin-right: 2vw;
         text-decoration: none;
       }
-    }
-  }
-  .arrow {
-    color: rgb(0, 0, 0);
-    z-index: 2;
-    .fas {
-      position: absolute;
-      line-height: 50px;
-      top: 1vh;
-      right: 3vw;
-      font-size: 1.2rem;
-    }
-    #click {
-      display: none;
-      position: absolute;
-      top: 2vh;
-      right: 2.5vw;
-      font-size: 0.8rem;
-      z-index: -2;
-    }
-  }
-  .arrow:hover {
-    .fas {
-      top: 3.5vh;
-    }
-    #click {
-      z-index: 1;
-      display: block;
     }
   }
 }
