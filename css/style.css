@@ -61,24 +61,10 @@ body {
   transition: 0.3s;
 }
 
-.arrow #click {
-  display: none;
-  position: absolute;
-  top: 3vh;
-  right: 2.5vw;
-  font: bold;
-  z-index: -2;
-  -webkit-transition: 0.9s;
-  transition: 0.9s;
-}
-
-.arrow:hover .fas {
-  top: 4.5vh;
-}
-
-.arrow:hover #click {
-  z-index: 1;
-  display: block;
+.fas .on {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-color: red;
 }
 
 /* grid container*/
@@ -353,32 +339,6 @@ body {
     color: white;
     margin-right: 2vw;
     text-decoration: none;
-  }
-  .arrow {
-    color: black;
-    z-index: 2;
-  }
-  .arrow .fas {
-    position: absolute;
-    line-height: 50px;
-    top: 1vh;
-    right: 3vw;
-    font-size: 1.2rem;
-  }
-  .arrow #click {
-    display: none;
-    position: absolute;
-    top: 2vh;
-    right: 2.5vw;
-    font-size: 0.8rem;
-    z-index: -2;
-  }
-  .arrow:hover .fas {
-    top: 3.5vh;
-  }
-  .arrow:hover #click {
-    z-index: 1;
-    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
